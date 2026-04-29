@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Omdirigerer…</title>
+  <script>
+    // Store the full URL and redirect to the site root so the SPA can load.
+    // Works for both user pages (username.github.io) and project pages (username.github.io/repo).
+    sessionStorage.setItem('spa_path', location.href);
+    var parts = location.pathname.split('/').filter(Boolean);
+    var base = parts.length > 1 ? '/' + parts[0] + '/' : '/';
+    location.replace(base);
+  </script>
+</head>
+<body></body>
+</html>

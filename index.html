@@ -1,13 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <title>Baris Cankül</title>
+    <script>
+      // Restore path after GitHub Pages 404 redirect
+      var spa = sessionStorage.getItem('spa_path');
+      if (spa) {
+        sessionStorage.removeItem('spa_path');
+        try {
+          var u = new URL(spa);
+          history.replaceState(null, null, u.pathname + u.search + u.hash);
+        } catch(e) {}
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>

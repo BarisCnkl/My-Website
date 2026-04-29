@@ -11,7 +11,9 @@ import Contact from './components/Contact'
 
 const AdminApp = lazy(() => import('./admin/AdminApp'))
 
-const isAdmin = window.location.pathname === '/admin' || window.location.pathname.startsWith('/admin/')
+const _base = import.meta.env.BASE_URL.replace(/\/$/, '')
+const isAdmin = window.location.pathname === `${_base}/admin` ||
+  window.location.pathname.startsWith(`${_base}/admin/`)
 
 const VISITS_KEY = 'portfolio_visits'
 
