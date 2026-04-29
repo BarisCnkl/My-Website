@@ -1,0 +1,125 @@
+.section {
+  padding: 96px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 48px;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+.item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.dot {
+  position: absolute;
+  left: -28px;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.5);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.company {
+  font-size: 14px;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.company span {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.period {
+  font-size: 13px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+}
+
+.bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.bullets li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  padding-left: 16px;
+  position: relative;
+}
+
+.bullets li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.techTag {
+  padding: 4px 12px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 500;
+}
