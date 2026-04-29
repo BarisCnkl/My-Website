@@ -689,7 +689,7 @@ export default function AdminApp() {
             </button>
           ))}
         </nav>
-        <a href="/" className={styles.backBtn}>← Tilbage til siden</a>
+        <a href="/My-Website" className={styles.backBtn}>← Tilbage til siden</a>
       </aside>
 
       <main className={styles.main}>
