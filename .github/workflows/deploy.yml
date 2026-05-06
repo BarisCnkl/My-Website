@@ -31,8 +31,6 @@ jobs:
 
       - name: Byg
         run: npm run build
-        env:
-          GITHUB_REPOSITORY: ${{ github.repository }}
 
       - uses: actions/upload-pages-artifact@v3
         with:
